@@ -1,3 +1,11 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.loadBuffer = loadBuffer;
+exports.playData = playData;
+exports.playBuffer = playBuffer;
 var context = void 0;
 function getContext() {
   if (context) {
@@ -21,7 +29,7 @@ function getContext() {
  * @param {AudioContext}
  * @returns Promise<ArrayBuffer>
  */
-export function loadBuffer(url) {
+function loadBuffer(url) {
   return new Promise(function (resolve, reject) {
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
@@ -47,7 +55,7 @@ export function loadBuffer(url) {
  * @param {Float32Array}
  * @returns {AudioBufferSourceNode}
  */
-export function playData(data) {
+function playData(data) {
   var audioCtx = getContext();
   var buffer = audioCtx.createBuffer(1, data.length, audioCtx.sampleRate);
   var channel = buffer.getChannelData(0);
@@ -62,7 +70,7 @@ export function playData(data) {
  * @param {AudioBuffer}
  * @returns {AudioBufferSourceNode}
  */
-export function playBuffer(buffer) {
+function playBuffer(buffer) {
   var audioCtx = getContext();
   var source = audioCtx.createBufferSource();
   source.buffer = buffer;

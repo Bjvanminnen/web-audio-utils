@@ -2,7 +2,7 @@
   "name": "web-audio-utils",
   "version": "1.0.0",
   "description": "Some simple utils to help deal with web audio",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "NODE_ENV=production babel src -d dist"
   },
