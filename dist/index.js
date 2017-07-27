@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.getContext = getContext;
 exports.loadBuffer = loadBuffer;
 exports.playData = playData;
 exports.playBuffer = playBuffer;

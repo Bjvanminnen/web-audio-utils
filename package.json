@@ -1,6 +1,6 @@
 {
   "name": "web-audio-utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Some simple utils to help deal with web audio",
   "main": "dist/index.js",
   "scripts": {

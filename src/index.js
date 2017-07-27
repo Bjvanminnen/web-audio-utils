@@ -1,5 +1,5 @@
 let context;
-function getContext () {
+export function getContext () {
   if (context) {
     return context;
   }
